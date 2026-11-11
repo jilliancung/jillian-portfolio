@@ -1,0 +1,2 @@
+document.getElementById('year').textContent=new Date().getFullYear();
+const buttons=document.querySelectorAll('.filters button');const cards=document.querySelectorAll('.card');buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;cards.forEach(c=>c.style.display=(f==='all'||c.dataset.cat.includes(f))?'block':'none')}));
